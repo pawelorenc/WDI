@@ -1,3 +1,5 @@
+#Zadanie 7 - Napisz program, ktory oblicza wartosc N! dla N w zakresie od 1 do M, gdzie M jest wartoscia podana przez uzytkownika.
+
 def liczba(a) -> int:
     while True:
         try:
