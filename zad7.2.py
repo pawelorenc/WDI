@@ -25,6 +25,6 @@ def roznica(q: int):
         roznica = int(suma / i)
         print(f"Dla {i} dzialania roznica wyniku to {suma}-{roznica}={suma-roznica}!")
 
-n = liczba("Podaj liczbe: ")
-silnia(n)
-roznica(n)
+m = liczba("Podaj liczbe: ")
+silnia(m)
+roznica(m)

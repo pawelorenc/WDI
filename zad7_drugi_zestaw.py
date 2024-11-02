@@ -19,8 +19,8 @@ def silnia(n: int):
         print(suma)
         print(f"Roznica wyniku to {suma}-{roznica}={suma-roznica}!")
 
-n = liczba("Podaj liczbe: ")
-silnia(n)
+m = liczba("Podaj liczbe: ")
+silnia(m)
 
 
 
