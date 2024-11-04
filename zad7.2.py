@@ -4,7 +4,7 @@ def liczba(a) -> int:
     while True:
         try:
             k = int(input(a))
-            if k < 1 or k > 1000000:
+            if k < 1 or k > 10000:
                 print("Podana zla wartosc!")
                 continue
             return k
