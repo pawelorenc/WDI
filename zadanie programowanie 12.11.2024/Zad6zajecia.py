@@ -1,7 +1,7 @@
 #zakladamy ze m to kolumny
 #zakladamy ze n to wiersze
 
-def intInput(a) -> int:
+def intInput(a) -> int: #Funkcja na poprawny input
     while True:
         try:
             a = int(input(a))
@@ -10,7 +10,7 @@ def intInput(a) -> int:
             print("niepoprawny input!")
             continue
 
-def rozmiar_macierza(m:int, n:int, nazwa:str):
+def wartosci_macierza(m:int, n:int, nazwa:str): #Funkcja na wpisanie wartosci do macierzy A i B
     wysokosc = [] #Ta lista laczy podgrupy(listy)
     for i in range(n):
         szerokosc = []  #Ta lista tworzy nam podgrupy(listy)
@@ -40,8 +40,8 @@ def roznica_macierzy(m1, m2):
 n = intInput("N: ")
 m = intInput("M: ")
 
-macierz1 = rozmiar_macierza(m, n, "MacierzA" )
-macierz2 = rozmiar_macierza(m, n, "MacierzB" )
+macierz1 = wartosci_macierza(m, n, "MacierzA")
+macierz2 = wartosci_macierza(m, n, "MacierzB")
 
 suma = suma_macierzy(macierz1, macierz2)
 roznica = roznica_macierzy(macierz1, macierz2)
