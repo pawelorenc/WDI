@@ -12,7 +12,7 @@ liczba = liczb(("Podaj liczbe: "))
 if liczba <= 2:
     print("Liczba nie jest pierwsza.")
 else:
-    for i in range(2,int(liczba)):
+    for i in range(1,int(liczba**1/2)+1, 2):
         if liczba % i == 0:
             print("liczba nie jest pierwsza")
             break

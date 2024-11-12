@@ -1,10 +1,12 @@
 #Zadanie 7 - Napisz program, ktory oblicza wartosc N! dla N w zakresie od 1 do M, gdzie M jest wartoscia podana przez uzytkownika.
+#Nalezy obsluzyc wyjatek kiedy m < 1 i m > 10000
+
 
 def liczba(a) -> int:
     while True:
         try:
             k = int(input(a))
-            if k < 1 or k > 1000000:
+            if k < 1 or k > 10000:
                 print("Podana zla wartosc!")
                 continue
             return k

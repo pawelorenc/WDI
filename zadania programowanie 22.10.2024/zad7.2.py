@@ -1,5 +1,5 @@
 #Zadanie 7 - Napisz program, ktory oblicza wartosc N! dla N w zakresie od 1 do M, gdzie M jest wartoscia podana przez uzytkownika.
-
+#Nalezy obsluzyc wyjatek kiedy m < 1 i m > 10000
 def liczba(a) -> int:
     while True:
         try:
@@ -15,7 +15,6 @@ def silnia(k: int):
     suma = 1
     for i in range(1, k + 1):
         suma *= i
-        roznica = int(suma / i)
         print(suma)
 
 def roznica(q: int):
