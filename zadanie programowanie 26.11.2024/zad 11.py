@@ -1,6 +1,5 @@
-#W tym programie bedziemy uzywac wzoru Taylora
+#W tym programie bedziemy uzywac wzoru na szereg Taylora
 #Poniewaz nie uzywamy biblioteki math musze recznie wpisac wartosc PI
-
 
 
 def silnia(n):
