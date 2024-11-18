@@ -62,6 +62,8 @@ print("\nRoznica Macierzy: ")
 for i in roznica:
     print(i)
 
+    #4 2 1
+
 #Przykladowy dla malego macierza 2 na 3
 # N: 2
 # M: 3
