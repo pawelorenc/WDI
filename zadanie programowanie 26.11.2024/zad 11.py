@@ -67,3 +67,49 @@ def odczytanie_z_pliku(nazwapliku):
 zapis_w_pliku("trygonometryczne.csv", katy)
 odczytanie_z_pliku("trygonometryczne.csv")
 
+#Wynik kodu zapisany do pliku trygonometryczne.csv
+# Kąt(radiany) z sin(x), cos(x), tg(x), ctg(x)
+#
+# Kąt: 0 radianow
+# sin(x) = 0.0
+# cos(x) = 1.0
+# tg(x) = 0.0
+# ctg(x) = inf
+#
+# Kąt: 0.5235987755982988 radianow
+# sin(x) = 0.49999999999999994
+# cos(x) = 0.8660254037844386
+# tg(x) = 0.5773502691896257
+# ctg(x) = 1.7320508075688774
+#
+# Kąt: 0.7853981633974483 radianow
+# sin(x) = 0.7071067811865475
+# cos(x) = 0.7071067811865475
+# tg(x) = 1.0
+# ctg(x) = 1.0
+#
+# Kąt: 1.0471975511965976 radianow
+# sin(x) = 0.8660254037844385
+# cos(x) = 0.5000000000000001
+# tg(x) = 1.7320508075688765
+# ctg(x) = 0.5773502691896261
+#
+# Kąt: 1.5707963267948966 radianow
+# sin(x) = 1.0000000000000002
+# cos(x) = 4.2539467343847745e-17
+# tg(x) = 2.3507581604559628e+16
+# ctg(x) = 4.253946734384773e-17
+#
+# Kąt: 3.141592653589793 radianow
+# sin(x) = 3.3280566969799443e-16
+# cos(x) = -1.0000000000000002
+# tg(x) = -3.328056696979944e-16
+# ctg(x) = -3004756502217806.0
+#
+# Kąt: 6.283185307179586 radianow
+# sin(x) = 3.300904356666342e-15
+# cos(x) = 0.9999999999999902
+# tg(x) = 3.3009043566663745e-15
+# ctg(x) = 302947281092964.7
+#
+# Process finished with exit code 0
