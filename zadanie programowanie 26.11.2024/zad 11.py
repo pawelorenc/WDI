@@ -45,7 +45,7 @@ PI = 3.141592653589793 #Uzywamy wpisanej wartosci dla PI ze wzgledu na brak mozl
 katy = [0, PI/6, PI/4, PI/3, PI/2, PI, 2*PI] #Radianowe wartosci dla podanych katow w zadaniu.
 
 def zapis_w_pliku(nazwapliku, katy):
-    with open(nazwapliku, 'w') as f:
+    with open(nazwapliku, 'w') as f: #otwiera plik w trybie zapisu
         f.write(f'Kąt(radiany) z sin(x), cos(x), tg(x), ctg(x)\n')
         for kat in katy:
             f.write(f'\nKąt: {kat} radianow\n')
@@ -60,14 +60,14 @@ def zapis_w_pliku(nazwapliku, katy):
 
 
 def odczytanie_z_pliku(nazwapliku):
-    with open(nazwapliku, 'r') as f:
+    with open(nazwapliku, 'r') as f: #otwiera plik w trybie odczytu
         for line in f:
-            print(line.strip())
+            print(line.strip()) #strip usuwa zbedne znaki przed  i po zawartoscia tekstowa jak spacja
 
-zapis_w_pliku("trygonometryczne.csv", katy)
-odczytanie_z_pliku("trygonometryczne.csv")
+zapis_w_pliku("wartosci.csv", katy)
+odczytanie_z_pliku("wartosci.csv")
 
-#Wynik kodu zapisany do pliku trygonometryczne.csv
+#Wynik kodu zapisany do pliku wartosci.csv
 # Kąt(radiany) z sin(x), cos(x), tg(x), ctg(x)
 #
 # Kąt: 0 radianow
