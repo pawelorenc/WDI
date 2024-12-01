@@ -15,16 +15,16 @@ def print_plansza(plansza):#funkcja ktora wyswietla plansze
 
 
 def umieszczenie_goncow(plansza, dane): #funkcja umieszczająca gonce z tablicy 'dane' na planszy
-    for row, col in dane:
-        plansza[row][col] = "B"  #wstawiamy gonca na podstawie wspolrzędnych
+    for wiersz, kolumna in dane:
+        plansza[wiersz][kolumna] = "B"  #wstawiamy gonca na podstawie wspolrzędnych
 
 
 def generowanie_goncow(rozmiar, n):#funkcja generująca losowe wspolrzędne dla goncow
     pozycja = set()  #uzywam zbioru by uniknac duplikatow
     while len(pozycja) < n:
-        row = random.randint(0, rozmiar - 1)
-        col = random.randint(0, rozmiar - 1)
-        pozycja.add((row, col))  #dodajemy element (row, col) do zbioru
+        wiersz = random.randint(0, rozmiar - 1)
+        kolumna = random.randint(0, rozmiar - 1)
+        pozycja.add((wiersz, kolumna))  #dodajemy element (wiersz, kolumna) do zbioru
     return list(pozycja)  #konwertujemy zbior na liste
 
 
