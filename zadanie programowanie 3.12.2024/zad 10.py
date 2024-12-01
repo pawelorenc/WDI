@@ -19,23 +19,23 @@ def umieszczenie_goncow(plansza, dane): #funkcja umieszczająca gonce z tablicy 
         plansza[row][col] = "B"  #wstawiamy gonca na podstawie wspolrzędnych
 
 
-def generowanie_goncow(size, n):#funkcja generująca losowe wspolrzędne dla goncow
-    positions = set()  #uzywam zbioru by uniknac duplikatow
-    while len(positions) < n:
-        row = random.randint(0, size - 1)
-        col = random.randint(0, size - 1)
-        positions.add((row, col))  #dodajemy element (row, col) do zbioru
-    return list(positions)  #konwertujemy zbior na liste
+def generowanie_goncow(rozmiar, n):#funkcja generująca losowe wspolrzędne dla goncow
+    pozycja = set()  #uzywam zbioru by uniknac duplikatow
+    while len(pozycja) < n:
+        row = random.randint(0, rozmiar - 1)
+        col = random.randint(0, rozmiar - 1)
+        pozycja.add((row, col))  #dodajemy element (row, col) do zbioru
+    return list(pozycja)  #konwertujemy zbior na liste
 
 
 def szachujace_gonce(dane): #funkcja zwracajaca pozycje goncow wzajemnie się szachujacych
     szachujace = []
     for i in range(len(dane)):
         for j in range(i + 1, len(dane)):
-            row1, col1 = dane[i]
-            row2, col2 = dane[j]
+            wiersz1, kolumna1 = dane[i]
+            wiersz2, kolumna2 = dane[j]
             #sprawdzamy czy gonce szachuja się (czy sa na tej samej przekatnej)
-            if abs(row1 - row2) == abs(col1 - col2):
+            if abs(wiersz1 - wiersz2) == abs(kolumna1 - kolumna2):
                 szachujace.append((dane[i], dane[j]))  #dodajemy parę gońców szachujących się
     return szachujace
 
