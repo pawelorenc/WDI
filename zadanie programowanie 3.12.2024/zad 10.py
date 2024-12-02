@@ -14,11 +14,6 @@ def print_plansza(plansza):#funkcja ktora wyswietla plansze
     print(" ---" * rozmiar)  #zamyka plansze
 
 
-def umieszczenie_goncow(plansza, dane): #funkcja umieszczająca gonce z tablicy 'dane' na planszy
-    for wiersz, kolumna in dane:
-        plansza[wiersz][kolumna] = "B"  #wstawiamy gonca na podstawie wspolrzędnych
-
-
 def generowanie_goncow(rozmiar, n):#funkcja generująca losowe wspolrzędne dla goncow
     pozycja = set()  #uzywam zbioru by uniknac duplikatow
     while len(pozycja) < n:
@@ -27,6 +22,10 @@ def generowanie_goncow(rozmiar, n):#funkcja generująca losowe wspolrzędne dla 
         pozycja.add((wiersz, kolumna))  #dodajemy element (wiersz, kolumna) do zbioru
     return list(pozycja)  #konwertujemy zbior na liste
 
+
+def umieszczenie_goncow(plansza, dane): #funkcja umieszczająca gonce z tablicy 'dane' na planszy
+    for wiersz, kolumna in dane:
+        plansza[wiersz][kolumna] = "B"  #wstawiamy gonca na podstawie wspolrzędnych
 
 def szachujace_gonce(dane): #funkcja zwracajaca pozycje goncow wzajemnie się szachujacych
     szachujace = []
