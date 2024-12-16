@@ -1,10 +1,10 @@
 import random
 
-def plansza(rozmiar): #funkcja ktora tworzy pustą szachownice
+def plansza(rozmiar):
     return [[" " for _ in range(rozmiar)] for _ in range(rozmiar)]
 
 
-def print_plansza(plansza):#funkcja ktora wyswietla plansze
+def print_plansza(plansza):
     rozmiar = len(plansza)
     for kolumna in range(rozmiar):
         print(" ---" * rozmiar)  #stwarza pozioma linie odzielajaca wiersze
@@ -14,20 +14,20 @@ def print_plansza(plansza):#funkcja ktora wyswietla plansze
     print(" ---" * rozmiar)  #zamyka plansze
 
 
-def generowanie_goncow(rozmiar, n):#funkcja generująca losowe wspolrzędne dla goncow
+def generowanie_goncow(rozmiar, n):
     pozycja = set()  #uzywam zbioru by uniknac duplikatow
     while len(pozycja) < n:
         wiersz = random.randint(0, rozmiar - 1)
         kolumna = random.randint(0, rozmiar - 1)
-        pozycja.add((wiersz, kolumna))  #dodajemy element (wiersz, kolumna) do zbioru
+        pozycja.add((wiersz, kolumna))
     return list(pozycja)  #konwertujemy zbior na liste
 
 
-def umieszczenie_goncow(plansza, dane): #funkcja umieszczająca gonce z tablicy 'dane' na planszy
+def umieszczenie_goncow(plansza, dane):
     for wiersz, kolumna in dane:
-        plansza[wiersz][kolumna] = "B"  #wstawiamy gonca na podstawie wspolrzędnych
+        plansza[wiersz][kolumna] = "B"
 
-def szachujace_gonce(dane): #funkcja zwracajaca pozycje goncow wzajemnie się szachujacych
+def szachujace_gonce(dane):
     szachujace = []
     for i in range(len(dane)):
         for j in range(i + 1, len(dane)):
@@ -35,29 +35,23 @@ def szachujace_gonce(dane): #funkcja zwracajaca pozycje goncow wzajemnie się sz
             wiersz2, kolumna2 = dane[j]
             #sprawdzamy czy gonce szachuja się (czy sa na tej samej przekatnej)
             if abs(wiersz1 - wiersz2) == abs(kolumna1 - kolumna2):
-                szachujace.append((dane[i], dane[j]))  #dodajemy parę gońców szachujących się
+                szachujace.append((dane[i], dane[j]))
     return szachujace
 
-rozmiar = 100  #rozmiar planszy
+rozmiar = 100
 n = random.randint(1, 99)  #liczba gońców (N < 100)
 
-#generowanie losowych pozycji dla gońców
 dane = generowanie_goncow(rozmiar, n)
 
-#tworzenie pustej planszy
 plansza = plansza(rozmiar)
 
-#umieszczanie gońców na planszy na podstawie tablicy 'dane'
 umieszczenie_goncow(plansza, dane)
 
-#wyświetlenie planszy
 print_plansza(plansza)
 
-#wyświetlenie pozycji gońców
 print("\nPozycje gońców:")
 print(dane)
 
-# Zwrócenie pozycji gońców szachujących się
 szachujace = szachujace_gonce(dane)
 
 #zależnie od liczby szachujących się gońców, wypisujemy odpowiednią informację
