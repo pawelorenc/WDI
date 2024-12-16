@@ -4,14 +4,14 @@ def plansza(rozmiar):
     return [[" " for _ in range(rozmiar)] for _ in range(rozmiar)]
 
 
-def print_plansza(plansza):
+def print_plansza(plansza): #tworzy plansze
     rozmiar = len(plansza)
     for kolumna in range(rozmiar):
-        print(" ---" * rozmiar)  #stwarza pozioma linie odzielajaca wiersze
+        print(" ---" * rozmiar)
         for wiersz in range(rozmiar):
-            print(f"| {plansza[kolumna][wiersz]} ", end="")  #wypisuje zawartosc planszy
-        print("|")  #zamyka prawą stronę wiersza
-    print(" ---" * rozmiar)  #zamyka plansze
+            print(f"| {plansza[kolumna][wiersz]} ", end="")
+        print("|")
+    print(" ---" * rozmiar)
 
 
 def generowanie_goncow(rozmiar, n):
