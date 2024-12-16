@@ -5,6 +5,9 @@ class ChessBoard:
         self.rozmiar = rozmiar
         self.plansza = self._tworzenie_planszy()
         self.gonce = []
+        self.generowanie_goncow(n)
+        self.umieszczenie_goncow()
+        self.print_plansza()
 
     def _tworzenie_planszy(self):
         return [[" " for _ in range(self.rozmiar)] for _ in range(self.rozmiar)]
@@ -42,17 +45,10 @@ class ChessBoard:
     def pokaz_gonce(self):
         return self.gonce
 
-
 rozmiar = 10
 n = random.randint(1, 99)
 
 szachownica = ChessBoard(rozmiar)
-
-szachownica.generowanie_goncow(n)
-
-szachownica.umieszczenie_goncow()
-
-szachownica.print_plansza()
 
 print("\nPozycje gońców:")
 print(szachownica.pokaz_gonce())
