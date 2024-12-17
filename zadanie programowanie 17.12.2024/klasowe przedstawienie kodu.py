@@ -46,7 +46,7 @@ class ChessBoard:
         return self.gonce
 
 rozmiar = 10
-n = random.randint(1, 99)
+n = random.randint(1, 100)
 
 szachownica = ChessBoard(rozmiar)
 
